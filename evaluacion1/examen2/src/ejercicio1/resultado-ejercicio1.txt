@@ -1,0 +1,45 @@
+Estación: ATOCHA
+Ticket consigna cliente nº: 1
+Total minutos alquilados: 190
+Total horas a facturar: 4
+Tipo taquilla: PEQUEÑA
+Carnet Interrail: true
+Importe total a pagar: 2.25€
+
+Estación: ATOCHA
+Ticket consigna cliente nº: 2
+Total minutos alquilados: 450
+Total horas a facturar: 8
+Tipo taquilla: GRANDE
+Carnet Interrail: false
+Con suplemento: 5.0€
+Importe total a pagar: 9.5€
+
+Estación: ATOCHA
+Ticket consigna cliente nº: 3
+Total minutos alquilados: 124
+Total horas a facturar: 3
+Tipo taquilla: PEQUEÑA
+Carnet Interrail: false
+Importe total a pagar: 2.0€
+
+Estación: ATOCHA
+Ticket consigna cliente nº: 4
+Total minutos alquilados: 650
+Total horas a facturar: 11
+Tipo taquilla: PEQUEÑA
+Carnet Interrail: false
+Importe total a pagar: 6.0€
+
+Estación: ATOCHA
+Ticket consigna cliente nº: 5
+Total minutos alquilados: 245
+Total horas a facturar: 5
+Tipo taquilla: GRANDE
+Carnet Interrail: true
+Con suplemento: 5.0€
+Importe total a pagar: 7.2€
+
+Total acumulado por la consigna en el día 26.95€
+Nº de cliente que más ha pagado: 2
+Cantidad abonada: 9.5€

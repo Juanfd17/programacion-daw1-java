@@ -1,0 +1,25 @@
+Teclee x: 2
+Teclee y: 8
+Teclee dirección (1 - ESTE / 2 - OESTE): 0
+Incorrecto, Teclee dirección (1 - ESTE / 2 - OESTE): 3
+Incorrecto, Teclee dirección (1 - ESTE / 2 - OESTE): 1
+--------------------------------------------
+Antes de mover ...
+Dirección: ESTE
+Posición: [x = 2 ,  y = 8]
+
+Movimientos: 1
+Avanzando hacia la derecha (este) 24
+Movimientos: 2
+Avanzando hacia la derecha (este) 27
+Después de hacer 2 movimientos ...
+Dirección: ESTE
+Posición: [x = 53 ,  y = 8]
+
+Movimientos: 3
+Avanzando hacia la izquierda (oeste) 36
+Movimientos: 4
+Avanzando hacia la izquierda (oeste) 28
+Después de cambiar de dirección y volver a mover...
+Dirección: OESTE
+Posición: [x = -11 ,  y = 8]
