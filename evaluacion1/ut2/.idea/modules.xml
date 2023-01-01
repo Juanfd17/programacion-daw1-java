@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EJ2.1/EJ2.1.iml" filepath="$PROJECT_DIR$/EJ2.1/EJ2.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EJ2.2/EJ2.2.iml" filepath="$PROJECT_DIR$/EJ2.2/EJ2.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EJ2.7/EJ2.7.iml" filepath="$PROJECT_DIR$/EJ2.7/EJ2.7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Prueba/Prueba.iml" filepath="$PROJECT_DIR$/Prueba/Prueba.iml" />
+      <module fileurl="file://$PROJECT_DIR$/a-teclado/a-teclado.iml" filepath="$PROJECT_DIR$/a-teclado/a-teclado.iml" />
+      <module fileurl="file://$PROJECT_DIR$/comparaciones/comparaciones.iml" filepath="$PROJECT_DIR$/comparaciones/comparaciones.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tarea1/tarea1.iml" filepath="$PROJECT_DIR$/tarea1/tarea1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tarea2/tarea2.iml" filepath="$PROJECT_DIR$/tarea2/tarea2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ut2.iml" filepath="$PROJECT_DIR$/.idea/ut2.iml" />
+    </modules>
+  </component>
+</project>

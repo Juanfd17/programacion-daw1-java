@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=queAutor\ queTitulo
+comment0.target=Libro(String,\ String)
+comment0.text=\nestablecer\ el\ autor\ y\ el\ t\u00EDtulo\ cunado\ el\ objeto\ se\ construya\n\n
+numComments=1
