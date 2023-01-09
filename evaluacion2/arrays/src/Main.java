@@ -28,8 +28,19 @@ public class Main {
         int[] valoresPares = pares(valores);
         imprimirArray(valoresPares);
         System.out.println("rotar");
-        int[] valoresRotado = rotarArray(valores);
+        int[] valoresRotado = valores;
+        rotarArray(valoresRotado);
         imprimirArray(valoresRotado);
+        System.out.println("expandir");
+        int[] valoresExtendidos = expandir(valores);
+        imprimirArray(valoresExtendidos);
+        System.out.println("numeros aleatorios");
+        int[] frecuencia = frecuencia();
+        imprimirArray(frecuencia);
+        System.out.println("contador dias");
+        ContadorDias contadorDias = new ContadorDias();
+        System.out.println(contadorDias.contarDias(1,2,2002));
+        System.out.println("Luz solar");
     }
 
     public static String encontrarNombreDia(int diaSemana){
@@ -94,7 +105,7 @@ public class Main {
         }
     }
 
-    public static int[] rotarArray(int[] array){
+    public static void rotarArray(int[] array){
         int[] rotado = new int[array.length];
 
         for (int i = 0; i < array.length-1; i++) {
@@ -102,6 +113,60 @@ public class Main {
         }
         rotado[0] = array[array.length-1];
 
-        return rotado;
+        System.arraycopy(rotado,0,array,0,array.length);
+    }
+
+    public static int[] expandir(int[] array){
+        int[] expandido = new int[array.length*2];
+        int contador = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            expandido[contador] = array[i];
+            contador++;
+            expandido[contador] = array[i];
+            contador++;
+        }
+
+        return expandido;
+    }
+
+    public static int[] frecuencia(){
+
+        int f1 = 0;
+        int f2 = 0;
+        int f3 = 0;
+        int f4 = 0;
+        int f5 = 0;
+        int f6 = 0;
+        int f7 = 0;
+        int f8 = 0;
+        int f9 = 0;
+        int numero = 0;
+
+        for (int i = 0; i < 100; i++) {
+            numero = (int) (Math.random()*9+1);
+            if (numero == 1){
+                f1++;
+            } else if (numero == 2){
+                f2++;
+            } else if (numero == 3){
+                f3++;
+            } else if (numero == 4){
+                f4++;
+            } else if (numero == 5){
+                f5++;
+            } else if (numero == 6){
+                f6++;
+            } else if (numero == 7){
+                f7++;
+            } else if (numero == 8){
+                f8++;
+            } else {
+                f9++;
+            }
+        }
+
+        int[] freciencia = {f1,f2,f3,f4,f5,f6,f7,f8,f9};
+        return freciencia;
     }
 }
