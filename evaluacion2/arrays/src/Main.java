@@ -39,8 +39,12 @@ public class Main {
         imprimirArray(frecuencia);
         System.out.println("contador dias");
         ContadorDias contadorDias = new ContadorDias();
-        System.out.println(contadorDias.contarDias(1,2,2002));
+        System.out.println(contadorDias.contarDias(31,12,2003));
         System.out.println("Luz solar");
+        EstadisticaLuzSolar estadisticaLuzSolar = new EstadisticaLuzSolar();
+        System.out.println(estadisticaLuzSolar.mesMasSoleado());
+        System.out.println(estadisticaLuzSolar.mesMenosSoleado());
+        System.out.println(estadisticaLuzSolar.getMediaSol());
     }
 
     public static String encontrarNombreDia(int diaSemana){
@@ -131,42 +135,14 @@ public class Main {
     }
 
     public static int[] frecuencia(){
-
-        int f1 = 0;
-        int f2 = 0;
-        int f3 = 0;
-        int f4 = 0;
-        int f5 = 0;
-        int f6 = 0;
-        int f7 = 0;
-        int f8 = 0;
-        int f9 = 0;
+        int[] frecuencia = new int[9];
         int numero = 0;
 
         for (int i = 0; i < 100; i++) {
             numero = (int) (Math.random()*9+1);
-            if (numero == 1){
-                f1++;
-            } else if (numero == 2){
-                f2++;
-            } else if (numero == 3){
-                f3++;
-            } else if (numero == 4){
-                f4++;
-            } else if (numero == 5){
-                f5++;
-            } else if (numero == 6){
-                f6++;
-            } else if (numero == 7){
-                f7++;
-            } else if (numero == 8){
-                f8++;
-            } else {
-                f9++;
-            }
+            frecuencia[numero-1]++;
         }
 
-        int[] freciencia = {f1,f2,f3,f4,f5,f6,f7,f8,f9};
-        return freciencia;
+        return frecuencia;
     }
 }
