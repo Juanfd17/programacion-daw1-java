@@ -110,20 +110,23 @@ public class TareaArrays {
         }
     }
 
-    public static float[] inserta(float[] numeros, float valor, int posicion){
-        float[] aniadido = new float[numeros.length + 1];
-        posicion--;
+    public static float[] inserta(float[] numeros, float valor, int posicion) {
+        if (posicion > 0 && posicion <= numeros.length+1) {
+            float[] aniadido = new float[numeros.length + 1];
+            posicion--;
 
-        for (int i = 0; i < aniadido.length; i++) {
-           if (i < posicion){
-               aniadido[i] = numeros[i];
-           } else if (i == posicion){
-               aniadido[i] = valor;
-           } else {
-               aniadido[i] = numeros[i-1];
-           }
+            for (int i = 0; i < aniadido.length; i++) {
+                if (i < posicion) {
+                    aniadido[i] = numeros[i];
+                } else if (i == posicion) {
+                    aniadido[i] = valor;
+                } else {
+                    aniadido[i] = numeros[i - 1];
+                }
+            }
+
+            return aniadido;
         }
-
-        return aniadido;
+        return numeros;
     }
 }
