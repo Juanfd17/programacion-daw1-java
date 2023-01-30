@@ -1,8 +1,3 @@
-import jdk.jshell.spi.SPIResolutionException;
-
-import javax.print.DocFlavor;
-import java.util.Arrays;
-
 public class Cine {
     private final int PRECIOJOVEN = 20;
     private final int PRECIOJUBILADO = 20;
@@ -35,9 +30,9 @@ public class Cine {
         }
         if (nuevoCliente) {
             int nclientes = clientesJoven + clientesJubilado + clientesVip;
-            Cliente[] clientes = new Cliente[nclientes + 1];
+            Cliente[] TEMPClientes = new Cliente[nclientes + 1];
             for (int i = 0; i < nclientes; i++) {
-                clientes[i] = this.clientes[i];
+                TEMPClientes[i] = this.clientes[i];
             }
 
             if (cliente.getTipoCuenta() == 1) {
@@ -48,8 +43,8 @@ public class Cine {
                 clientesVip++;
             }
 
-            clientes[nclientes] = cliente;
-            this.clientes = clientes;
+            TEMPClientes[nclientes] = cliente;
+            this.clientes = TEMPClientes;
             return true;
         }
         return false;
@@ -57,7 +52,7 @@ public class Cine {
 
     public String monstrarClientes() {
         int nclientes = clientesJoven + clientesJubilado + clientesVip;
-        if (nclientes == 0){
+        if (nclientes == 0) {
             return "No hay clientes\n";
         }
 

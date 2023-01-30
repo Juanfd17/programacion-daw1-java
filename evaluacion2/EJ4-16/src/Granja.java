@@ -7,43 +7,43 @@ public class Granja {
         this.contador = 0;
     }
 
-    public void addAnimal(Animal animal){
-        if (this.contador < this.animales.length){
+    public void addAnimal(Animal animal) {
+        if (this.contador < this.animales.length) {
             this.animales[contador] = animal;
             contador++;
         }
     }
 
-    public void mostrarAnimales(){
+    public void mostrarAnimales() {
         for (int i = 0; i < contador; i++) {
             System.out.println(animales[i]);
         }
     }
 
-    public Animal getAnimal(int i){
-        if (!(animales[i] == null)){
+    public Animal getAnimal(int i) {
+        if (!(animales[i] == null)) {
             return animales[i];
         }
         return null;
     }
 
-    public int cuantosPerros(){
+    public int cuantosPerros() {
         int cantidad = 0;
-        for (Animal animal: animales) {
-            if(animal instanceof Perro){
+        for (Animal animal : animales) {
+            if (animal instanceof Perro) {
                 cantidad++;
             }
         }
         return cantidad;
     }
 
-    public void borrarGatos(){
+    public void borrarGatos() {
         for (int i = 0; i < contador; i++) {
-            if (animales[i] instanceof Gato){
-                for (int j = i; j < contador; j++) {
-                    animales[j] = animales[j+1];
-                }
+            if (animales[i] instanceof Gato) {
                 contador--;
+                for (int j = i; j < contador; j++) {
+                    animales[j] = animales[j + 1];
+                }
                 i--;
             }
         }

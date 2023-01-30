@@ -15,6 +15,7 @@ public class Main {
         granja1.addAnimal(gato2);
         granja1.addAnimal(vaca1);
         granja1.addAnimal(vaca2);
+        granja1.addAnimal(gato1);
 
         granja1.mostrarAnimales();
 
