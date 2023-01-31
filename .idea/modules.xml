@@ -38,6 +38,7 @@
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/ut3/Ej3.7/Ej3.7.iml" filepath="$PROJECT_DIR$/evaluacion1/ut3/Ej3.7/Ej3.7.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/ut3/Ej3.7.2/Ej3.7.2.iml" filepath="$PROJECT_DIR$/evaluacion1/ut3/Ej3.7.2/Ej3.7.2.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion2/Ej4-15/Ej4-15.iml" filepath="$PROJECT_DIR$/evaluacion2/Ej4-15/Ej4-15.iml" />
+      <module fileurl="file://$PROJECT_DIR$/evaluacion2/Ej4-17/Ej4-17.iml" filepath="$PROJECT_DIR$/evaluacion2/Ej4-17/Ej4-17.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/ut2/Prueba/Prueba.iml" filepath="$PROJECT_DIR$/evaluacion1/ut2/Prueba/Prueba.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/ut3/T1/T1.iml" filepath="$PROJECT_DIR$/evaluacion1/ut3/T1/T1.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/ut3/T10/T10.iml" filepath="$PROJECT_DIR$/evaluacion1/ut3/T10/T10.iml" />
@@ -74,11 +75,17 @@
       <module fileurl="file://$PROJECT_DIR$/pruebas/cubo_magico/cubo_magico.iml" filepath="$PROJECT_DIR$/pruebas/cubo_magico/cubo_magico.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/ut3/ej.triangulo/ej.triangulo.iml" filepath="$PROJECT_DIR$/evaluacion1/ut3/ej.triangulo/ej.triangulo.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/ut3/ej3.25/ej3.25.iml" filepath="$PROJECT_DIR$/evaluacion1/ut3/ej3.25/ej3.25.iml" />
+      <module fileurl="file://$PROJECT_DIR$/evaluacion2/ej4-18/ej4-18.iml" filepath="$PROJECT_DIR$/evaluacion2/ej4-18/ej4-18.iml" />
+      <module fileurl="file://$PROJECT_DIR$/evaluacion2/ej4-19/ej4-19.iml" filepath="$PROJECT_DIR$/evaluacion2/ej4-19/ej4-19.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/ut3/ej_perros/ej_perros.iml" filepath="$PROJECT_DIR$/evaluacion1/ut3/ej_perros/ej_perros.iml" />
+      <module fileurl="file://$PROJECT_DIR$/evaluacion2/enums/enums.iml" filepath="$PROJECT_DIR$/evaluacion2/enums/enums.iml" />
       <module fileurl="file://$PROJECT_DIR$/pruebas/equas/equas.iml" filepath="$PROJECT_DIR$/pruebas/equas/equas.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/evaluacion1.iml" filepath="$PROJECT_DIR$/evaluacion1/evaluacion1.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion2/evaluacion2.iml" filepath="$PROJECT_DIR$/evaluacion2/evaluacion2.iml" />
       <module fileurl="file://$PROJECT_DIR$/examen 1/examen 1.iml" filepath="$PROJECT_DIR$/examen 1/examen 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/evaluacion2/extra/extra.iml" filepath="$PROJECT_DIR$/evaluacion2/extra/extra.iml" />
+      <module fileurl="file://$PROJECT_DIR$/evaluacion2/extraDiaSemana/extraDiaSemana.iml" filepath="$PROJECT_DIR$/evaluacion2/extraDiaSemana/extraDiaSemana.iml" />
+      <module fileurl="file://$PROJECT_DIR$/evaluacion2/extraOperacion/extraOperacion.iml" filepath="$PROJECT_DIR$/evaluacion2/extraOperacion/extraOperacion.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion2/herencia/herencia.iml" filepath="$PROJECT_DIR$/evaluacion2/herencia/herencia.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/ut3/holaMundo/holaMundo.iml" filepath="$PROJECT_DIR$/evaluacion1/ut3/holaMundo/holaMundo.iml" />
       <module fileurl="file://$PROJECT_DIR$/intelij.iml" filepath="$PROJECT_DIR$/intelij.iml" />
