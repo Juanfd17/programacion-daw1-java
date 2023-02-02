@@ -8,5 +8,4 @@ public class Main {
         persona.caminar(5,"curro");
         System.out.println(persona.caminarR(5));
     }
-
 }
