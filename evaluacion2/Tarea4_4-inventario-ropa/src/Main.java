@@ -15,7 +15,7 @@ public class Main {
         System.out.println(inventario.comparador(bota1,zapatilla1));
 
         Pantalon pantalon1 = new Pantalon("a1","pantalon1",40,"m","1");
-        Pantalon pantalon2 = new Pantalon("a1","pantalon1",40,"l","2");
+        Pantalon pantalon2 = new Pantalon("a1","pantalon1",41,"m","1");
 
         inventario.agregarPrendas(pantalon1);
         inventario.agregarPrendas(pantalon2);

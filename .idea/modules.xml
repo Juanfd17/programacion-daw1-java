@@ -70,6 +70,7 @@
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/ut3/casa/casa.iml" filepath="$PROJECT_DIR$/evaluacion1/ut3/casa/casa.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/ut3/coche/coche.iml" filepath="$PROJECT_DIR$/evaluacion1/ut3/coche/coche.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/ut2/comparaciones/comparaciones.iml" filepath="$PROJECT_DIR$/evaluacion1/ut2/comparaciones/comparaciones.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pruebas/compareto/compareto.iml" filepath="$PROJECT_DIR$/pruebas/compareto/compareto.iml" />
       <module fileurl="file://$PROJECT_DIR$/pruebas/cosa1/cosa1.iml" filepath="$PROJECT_DIR$/pruebas/cosa1/cosa1.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/ut3/cuadrado/cuadrado.iml" filepath="$PROJECT_DIR$/evaluacion1/ut3/cuadrado/cuadrado.iml" />
       <module fileurl="file://$PROJECT_DIR$/pruebas/cubo_magico/cubo_magico.iml" filepath="$PROJECT_DIR$/pruebas/cubo_magico/cubo_magico.iml" />
@@ -97,6 +98,7 @@
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/ut2/tarea2/tarea2.iml" filepath="$PROJECT_DIR$/evaluacion1/ut2/tarea2/tarea2.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion2/tarea4_03-Pila-Array/tarea4_03-Pila-Array.iml" filepath="$PROJECT_DIR$/evaluacion2/tarea4_03-Pila-Array/tarea4_03-Pila-Array.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion2/tarea5_cine/tarea5_cine.iml" filepath="$PROJECT_DIR$/evaluacion2/tarea5_cine/tarea5_cine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/evaluacion2/tarea6-musica/tarea6-musica.iml" filepath="$PROJECT_DIR$/evaluacion2/tarea6-musica/tarea6-musica.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/ut3/ut3.iml" filepath="$PROJECT_DIR$/evaluacion1/ut3/ut3.iml" />
     </modules>
   </component>

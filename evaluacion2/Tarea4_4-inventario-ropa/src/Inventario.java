@@ -24,14 +24,14 @@ public class Inventario {
 
     public int comparador(Prenda prenda1, Prenda prenda2){
 
+        if(prenda1.getClass() != prenda2.getClass()){
+            return -1;
+        }
+
         if (prenda1.equals(prenda2)){
             return 1;
         }
 
-        if (prenda1.getClass() == prenda2.getClass()){
-            return 0;
-        }
-
-        return -1;
+        return 0;
     }
 }
