@@ -1,9 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        int c = 1;
-        for (int j = 0; j< 33; j++) {
-            System.out.println(c);
-            c*=2;
-        }
+        String nombre = "Juan";
+        int edad = 30;
+        double altura = 1.75;
+
+        String mensaje = String.format("Hola, mi nombre es %s, tengo %d años y mido %.2f metros de altura.", nombre, edad, altura);
+        System.out.println(mensaje);
+
     }
 }
