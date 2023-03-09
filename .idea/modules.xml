@@ -42,6 +42,8 @@
       <module fileurl="file://$PROJECT_DIR$/evaluacion2/ut5/Ej5.1/Ej5.1.iml" filepath="$PROJECT_DIR$/evaluacion2/ut5/Ej5.1/Ej5.1.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion2/ut5/Ej5.10/Ej5.10.iml" filepath="$PROJECT_DIR$/evaluacion2/ut5/Ej5.10/Ej5.10.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion2/ut5/Ej5.11/Ej5.11.iml" filepath="$PROJECT_DIR$/evaluacion2/ut5/Ej5.11/Ej5.11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/evaluacion2/ut5/Ej5.12/Ej5.12.iml" filepath="$PROJECT_DIR$/evaluacion2/ut5/Ej5.12/Ej5.12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/evaluacion2/ut5/Ej5.13/Ej5.13.iml" filepath="$PROJECT_DIR$/evaluacion2/ut5/Ej5.13/Ej5.13.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion2/ut5/Ej5.2/Ej5.2.iml" filepath="$PROJECT_DIR$/evaluacion2/ut5/Ej5.2/Ej5.2.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion2/ut5/Ej5.3/Ej5.3.iml" filepath="$PROJECT_DIR$/evaluacion2/ut5/Ej5.3/Ej5.3.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion2/ut5/Ej5.4/Ej5.4.iml" filepath="$PROJECT_DIR$/evaluacion2/ut5/Ej5.4/Ej5.4.iml" />
@@ -64,6 +66,9 @@
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/ut3/T3/T3.iml" filepath="$PROJECT_DIR$/evaluacion1/ut3/T3/T3.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/ut3/T4 Factura de la luz/T4 Factura de la luz.iml" filepath="$PROJECT_DIR$/evaluacion1/ut3/T4 Factura de la luz/T4 Factura de la luz.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/ut3/T5/T5.iml" filepath="$PROJECT_DIR$/evaluacion1/ut3/T5/T5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/evaluacion2/ut5/T5.3/T5.3.iml" filepath="$PROJECT_DIR$/evaluacion2/ut5/T5.3/T5.3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/evaluacion2/ut5/T5.4/T5.4.iml" filepath="$PROJECT_DIR$/evaluacion2/ut5/T5.4/T5.4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/evaluacion2/ut5/T5.5/T5.5.iml" filepath="$PROJECT_DIR$/evaluacion2/ut5/T5.5/T5.5.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/ut3/T6/T6.iml" filepath="$PROJECT_DIR$/evaluacion1/ut3/T6/T6.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/ut3/T7/T7.iml" filepath="$PROJECT_DIR$/evaluacion1/ut3/T7/T7.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/ut3/T8/T8.iml" filepath="$PROJECT_DIR$/evaluacion1/ut3/T8/T8.iml" />
@@ -88,7 +93,6 @@
       <module fileurl="file://$PROJECT_DIR$/evaluacion2/ut4/ej4-18/ej4-18.iml" filepath="$PROJECT_DIR$/evaluacion2/ut4/ej4-18/ej4-18.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion2/ut4/ej4-19/ej4-19.iml" filepath="$PROJECT_DIR$/evaluacion2/ut4/ej4-19/ej4-19.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/ut3/ej_perros/ej_perros.iml" filepath="$PROJECT_DIR$/evaluacion1/ut3/ej_perros/ej_perros.iml" />
-      <module fileurl="file://$PROJECT_DIR$/evaluacion2/ut4/enums/enums.iml" filepath="$PROJECT_DIR$/evaluacion2/ut4/enums/enums.iml" />
       <module fileurl="file://$PROJECT_DIR$/pruebas/equas/equas.iml" filepath="$PROJECT_DIR$/pruebas/equas/equas.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion1/evaluacion1.iml" filepath="$PROJECT_DIR$/evaluacion1/evaluacion1.iml" />
       <module fileurl="file://$PROJECT_DIR$/evaluacion2/evaluacion2.iml" filepath="$PROJECT_DIR$/evaluacion2/evaluacion2.iml" />
