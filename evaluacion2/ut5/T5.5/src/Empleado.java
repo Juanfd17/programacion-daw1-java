@@ -10,7 +10,7 @@ public abstract class Empleado {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
-        this.horario = new boolean[7][3];
+        this.horario = new boolean[Dias.values().length][Turnos.values().length];
     }
 
     public void trabajar(Dias dia, Turnos turno){
