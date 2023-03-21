@@ -40,8 +40,7 @@ public class Main {
 
         Iterator<Estudiante> iterador = listaEstudiantes.iterator();
         while (iterador.hasNext()) {
-            Estudiante estudiante = iterador.next();
-            if (estudiante.getEdad() < 18) {
+            if (iterador.next().getEdad() < 18) {
                 iterador.remove();
             }
         }
