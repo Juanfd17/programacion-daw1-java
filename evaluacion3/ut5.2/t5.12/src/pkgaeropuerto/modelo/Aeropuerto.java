@@ -114,7 +114,21 @@ public class Aeropuerto {
 	 * @return numero de vuelos borrados
 	 */
 	public int borrarVuelosEmpresa(String nifEmpresa) {
-		return 1;
+		int vuelosBorrados = 0;
+		Set<String> aerolineas = vuelos.keySet();
+		for (String aerolinea : aerolineas) {
+			Set<Vuelo> vuelosAerolinea = vuelos.get(aerolinea);
+			Iterator<Vuelo> iterador = vuelosAerolinea.iterator();
+			while (iterador.hasNext()) {
+				Vuelo vuelo = iterador.next();
+				if (vuelo instanceof Charter && ((Charter) vuelo).getNif().equals(nifEmpresa)) {
+					iterador.remove();
+					vuelosBorrados++;
+				}
+			}
+		}
+
+		return vuelosBorrados;
 	}
 
 	/**

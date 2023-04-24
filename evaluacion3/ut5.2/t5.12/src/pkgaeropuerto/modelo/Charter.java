@@ -1,7 +1,7 @@
 package pkgaeropuerto.modelo;
 
 public class Charter extends Vuelo {
-    String nif;
+    private String nif;
 
     public Charter(String destino, String modelo, int nPlazas, String nif) {
         super(destino, modelo, nPlazas);
