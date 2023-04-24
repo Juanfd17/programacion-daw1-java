@@ -18,7 +18,7 @@ public class Aeropuerto {
 	public void addVuelo(String aerolinea, Vuelo vuelo) {
 		Set<Vuelo> vueleosKey = vuelos.get(aerolinea);
 		if (vueleosKey == null){
-			vueleosKey = new TreeSet<>();
+			vueleosKey = new TreeSet<>(vuelo);
 		}
 
 		vueleosKey.add(vuelo);
@@ -30,7 +30,15 @@ public class Aeropuerto {
 	 * como vuelos estaran ordenados alfabeticamente (Ver resultados de ejecucion)
 	 */
 	public void ordenAerolineasAlfabetico() {
-
+		Set<String> aerolineas = vuelos.keySet();
+		for (String aerolinea: aerolineas) {
+			System.out.println(aerolinea);
+			System.out.println("========\n");
+			Set<Vuelo> vuelosAerolinea = vuelos.get(aerolinea);
+			for (Vuelo vuelo: vuelosAerolinea) {
+				System.out.println(vuelo);
+			}
+		}
 	}
 
 	/**
@@ -41,7 +49,17 @@ public class Aeropuerto {
 	 *            Aerolinea de la que se imprimiran los vuelos regulares
 	 */
 	public void regularPorPlazas(String aerolinea) {
+		Set<Vuelo> vuelosAerolinea = vuelos.get(aerolinea);
+		Set<Regular> vuelosRegulares = new TreeSet<>();
+		for (Vuelo vuelo: vuelosAerolinea) {
+			if (vuelo instanceof Regular){
+				vuelosRegulares.add((Regular) vuelo);
+			}
+		}
 
+		for (Vuelo vuelo: vuelosRegulares) {
+			System.out.println(vuelo);
+		}
 	}
 
 	/**
@@ -50,7 +68,20 @@ public class Aeropuerto {
 	 * @return aerolina Aerolina del avion charter con más capacidad
 	 */
 	public List<Vuelo> plazasLibres() {
-		return null;
+		Set<String> aerolineas = vuelos.keySet();
+		List<Vuelo> vuelosLibres = new ArrayList<>();
+		for (String aerolinea: aerolineas) {
+			Set<Vuelo> vuelosAerolinea = vuelos.get(aerolinea);
+			for (Vuelo vuelo: vuelosAerolinea) {
+				if (vuelo instanceof Regular){
+					if (((Regular) vuelo).getPlazasLibres() > 0){
+						vuelosLibres.add(vuelo);
+					}
+				}
+			}
+		}
+
+		return vuelosLibres;
 	}
 
 	/**
@@ -61,7 +92,18 @@ public class Aeropuerto {
 	 *            Destino del que se debe sacar la estadistica
 	 */
 	public void estadisticaDestino(String destino) {
-
+		System.out.println("Estadistica de los vuelos con destino a MAD\n");
+		Set<String> aerolineas = vuelos.keySet();
+		for (String aerolinea: aerolineas) {
+			Set<Vuelo> vuelosAerolinea = vuelos.get(aerolinea);
+			int nVuelos = 0;
+			for (Vuelo vuelo: vuelosAerolinea) {
+				if (vuelo.getDestino().equals(destino)){
+					nVuelos++;
+				}
+			}
+			System.out.println(nVuelos + " de cada " + vuelosAerolinea.size() + " de ka aerolinea " + aerolinea + " vuelan a " + destino + "\n");
+		}
 	}
 
 	/**
@@ -81,7 +123,9 @@ public class Aeropuerto {
 	 * @param listaVuelos
 	 */
 	public void imprimirListaVuelos(List<Vuelo> listaVuelos) {
-
+		for (Vuelo vuelo: listaVuelos) {
+			System.out.println(vuelo);
+		}
 	}
 
 	/**
