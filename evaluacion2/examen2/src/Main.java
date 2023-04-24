@@ -3,13 +3,13 @@ public class Main {
         Inmobiliaria i = new Inmobiliaria();
         for (int j = 0; j < 5; j++) {
             Direccion d = new Direccion("Municipio" + j, "Direccion" + j);
-            Finca f = new Finca("Finca"+j, 100 + j,50 + j, d,EstadoInmueble.SE_VENDE,true);
+            Finca f = new Finca("Finca"+j, 100 + j,50 + j, d,EstadoInmueble.SE_ALQUILA,true);
             i.anadirInmueble(f);
         }
 
         for (int j = 0; j < 5; j++) {
             Direccion d = new Direccion("Municipio" + j, "Direccion" + j);
-            Garaje f = new Garaje("Garage"+j, 100 + j,50 + j, d,EstadoInmueble.SE_VENDE,true);
+            Garaje f = new Garaje("Garage"+j, 100 + j,50 + j, d,EstadoInmueble.SE_ALQUILA,true);
             i.anadirInmueble(f);
         }
 
@@ -19,9 +19,16 @@ public class Main {
             i.anadirInmueble(f);
         }
 
+        for (int j = 1; j < 5; j++) {
+            Direccion d = new Direccion("Municipio12", "Direccion12" + j);
+            Vivienda f = new Vivienda("Vivienda12"+j, 101 + j,51 + j, d,EstadoInmueble.SE_ALQUILA,j,j-1);
+            i.anadirInmueble(f);
+        }
+
         i.inmueblesSinFincas();
         i.alquilarInmbueble("Vivienda2", "39817263H");
         i.venderInmbueble("Garage1", "39817263H");
+
         i.venderInmbueble("Garage2", "99625423F");
         i.venderInmbueble("Finca1", "99625423F");
         i.venderInmbueble("Finca2", "99625423F");
@@ -51,5 +58,11 @@ public class Main {
         System.out.println(i.compararInmuebles(f,f));
 
         System.out.println(i.inmueblesPorMunicipio("Municipio1"));
+
+        i.viviendasPorMunicipo2();
+        i.estadoInmueble();
+        i.operacionesPorDNI();
+        i.imprimirOperacionesPorDNI();
+        i.estadicasViviendas();
     }
 }

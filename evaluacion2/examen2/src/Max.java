@@ -1,0 +1,3 @@
+public enum Max {
+    MAX_HABITACIONES, MAX_ASEOS, MAX_SUPERFICIE
+}

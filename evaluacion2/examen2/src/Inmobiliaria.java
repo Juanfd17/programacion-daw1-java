@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class Inmobiliaria{
 	private final static String[] DATOS_EMPLEADOS = {
@@ -174,6 +172,106 @@ public class Inmobiliaria{
 
 	public ArrayList<Inmueble> getInmuebles() {
 		return inmuebles;
+	}
+
+	public HashMap<String, Set<Vivienda>> viviendasPorMunicipo2(){
+		HashMap<String, Set<Vivienda>> lista = new HashMap<>();
+
+		for (Inmueble i:inmuebles) {
+			if (i instanceof Vivienda) {
+				String municipio = i.getDireccion().getMunicipio();
+				Set<Vivienda> viviendas = lista.get(municipio);
+
+				if (viviendas == null){
+					viviendas = new HashSet<>();
+				}
+
+				viviendas.add((Vivienda) i);
+				lista.put(municipio, viviendas);
+			}
+		}
+
+		return lista;
+	}
+
+	public HashMap<EstadoInmueble, Integer> estadoInmueble(){
+		HashMap<EstadoInmueble, Integer> lista = new HashMap<>();
+		for (EstadoInmueble e: EstadoInmueble.values()) {
+			lista.put(e, 0);
+		}
+
+		for (Inmueble i: inmuebles) {
+			Integer contador = lista.get(i.getEstadoInmueble());
+
+			contador++;
+			lista.put(i.getEstadoInmueble(), contador);
+		}
+
+		return lista;
+	}
+
+	public HashMap<String, HashMap<String, Integer>> operacionesPorDNI(){
+		HashMap<String, HashMap<String, Integer>> listaE = new HashMap<>();
+		for (int i = 0; i < empleados.size(); i++) {
+			String dni = empleados.get(i).getDni();
+			HashMap<String, Integer> listaO = listaE.get(dni);
+			if (listaO == null){
+				listaO = new HashMap<>();
+			}
+
+			double[][] operaciones = empleados.get(i).getOperaciones();
+			for (int j = 0; j < operaciones.length; j++) {
+				int valor = 0;
+				String vOA = "Alquiler";
+				if (j == 1){
+					vOA = "Vender";
+				}
+				for (int k = 0; k < operaciones[j].length; k++) {
+					valor+= operaciones[j][k];
+				}
+				listaO.put(vOA,valor);
+			}
+
+			listaE.put(dni,listaO);
+		}
+
+		return listaE;
+	}
+
+	public void imprimirOperacionesPorDNI(){
+		HashMap<String, HashMap<String, Integer>> listaE = operacionesPorDNI();
+		for (int i = 0; i < empleados.size(); i++) {
+			String dni = empleados.get(i).getDni();
+			System.out.println("---" + dni);
+			System.out.println("\talquileres: " + listaE.get(dni).get("Alquiler"));
+			System.out.println("\tventas: " + listaE.get(dni).get("Vender"));
+		}
+	}
+
+	public HashMap<Max, Integer> estadicasViviendas(){
+		HashMap<Max, Integer> lista = new HashMap<>();
+
+		for (Max m: Max.values()) {
+			lista.put(m, 0);
+		}
+
+		for (Inmueble i: inmuebles) {
+			if (i instanceof  Vivienda){
+				if (i.getSuperficie() > lista.get(Max.MAX_SUPERFICIE)){
+					lista.put(Max.MAX_SUPERFICIE, i.getSuperficie());
+				}
+
+				if (((Vivienda) i).getNumeroAseos() > lista.get(Max.MAX_ASEOS)){
+					lista.put(Max.MAX_ASEOS, ((Vivienda) i).getNumeroAseos());
+				}
+
+				if (((Vivienda) i).getNumeroHabitaciones() > lista.get(Max.MAX_HABITACIONES)){
+					lista.put(Max.MAX_HABITACIONES, ((Vivienda) i).getNumeroHabitaciones());
+				}
+			}
+		}
+
+		return lista;
 	}
 
 	private Inmueble encontrarInmueble(String codigo){

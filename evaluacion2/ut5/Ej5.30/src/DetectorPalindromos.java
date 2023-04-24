@@ -1,15 +1,8 @@
 import java.util.Stack;
 
 public class DetectorPalindromos {
-    private String cadena;
-    private Stack<Character> letra;
-
-    public DetectorPalindromos(String cadena) {
-        this.cadena = cadena;
-        this.letra = new Stack<>();
-    }
-
-    public void comprueba(){
+    public static void comprueba(String cadena){
+        Stack<Character> letra = new Stack<>();
         for (int i = 0; i < cadena.length(); i++) {
             letra.push(cadena.charAt(i));
         }
