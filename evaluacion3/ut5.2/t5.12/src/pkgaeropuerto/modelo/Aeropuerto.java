@@ -1,10 +1,6 @@
 package pkgaeropuerto.modelo;
 
-import java.io.FileNotFoundException;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.Set;
-import java.util.TreeMap;
+import java.util.*;
 
 public class Aeropuerto {
 
@@ -20,7 +16,13 @@ public class Aeropuerto {
 	 * aerolinea como el vuelo.
 	 */
 	public void addVuelo(String aerolinea, Vuelo vuelo) {
+		Set<Vuelo> vueleosKey = vuelos.get(aerolinea);
+		if (vueleosKey == null){
+			vueleosKey = new TreeSet<>();
+		}
 
+		vueleosKey.add(vuelo);
+		vuelos.put(aerolinea, vueleosKey);
 	}
 
 	/**
@@ -48,7 +50,7 @@ public class Aeropuerto {
 	 * @return aerolina Aerolina del avion charter con más capacidad
 	 */
 	public List<Vuelo> plazasLibres() {
-
+		return null;
 	}
 
 	/**
@@ -70,7 +72,7 @@ public class Aeropuerto {
 	 * @return numero de vuelos borrados
 	 */
 	public int borrarVuelosEmpresa(String nifEmpresa) {
-
+		return 1;
 	}
 
 	/**
@@ -78,16 +80,16 @@ public class Aeropuerto {
 	 *
 	 * @param listaVuelos
 	 */
-	/*public void imprimirListaVuelos(List<pkgaeropuerto.modelo.Vuelo> listaVuelos) {
+	public void imprimirListaVuelos(List<Vuelo> listaVuelos) {
 
-	}*/
+	}
 
 	/**
 	 * Represetación textual del mapa tal y como se muestra en el enunciado
 	 */
-	/*public String toString() {
-
-	}*/
+	public String toString() {
+		return null;
+	}
 
 	/**
 	 * Rellena el mapa haciendo uso de un fichero de texto
@@ -95,7 +97,7 @@ public class Aeropuerto {
 	public void leerFicheroCursos() {
 		Scanner entrada = null;
 		try {
-			entrada = new Scanner(this.getClass().getResourceAsStream("src/aviones.txt"));
+			entrada = new Scanner(this.getClass().getResourceAsStream("../../aviones.txt"));
 			while (entrada.hasNextLine()) {
 				String linea = entrada.nextLine();
 				int pos = linea.indexOf(":");
