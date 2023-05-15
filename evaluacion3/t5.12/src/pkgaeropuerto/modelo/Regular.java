@@ -1,10 +1,10 @@
 package pkgaeropuerto.modelo;
 
-public class Regular extends Vuelo implements Comparable<Regular>{
+public class Regular extends Vuelo{
     private int plazasLibres;
 
-    public Regular(String destino, String modelo, int nPlazas, int plazasLibres) {
-        super(destino, modelo, nPlazas);
+    public Regular(String destino, String modelo, int nPlazas, int plazasLibres, int precio) {
+        super(destino, modelo, nPlazas, precio);
         this.plazasLibres = plazasLibres;
     }
 
@@ -16,19 +16,8 @@ public class Regular extends Vuelo implements Comparable<Regular>{
         this.plazasLibres = plazasLibres;
     }
 
-    @Override
-    public int compareTo(Regular o) {
-        int posicion = Integer.compare(o.plazasLibres, this.getPlazasLibres());
-
-        if (posicion == 0){
-            posicion = super.getDestino().compareTo(o.getDestino());
-        }
-
-        if (posicion == 0){
-            posicion = super.getModelo().compareTo(o.getModelo());
-        }
-
-        return posicion;
+    public double precioFinal (){
+        return (super.getPrecio() * 1.1) + (5 * getPlazasLibres());
     }
 
     @Override

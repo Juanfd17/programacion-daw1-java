@@ -3,8 +3,8 @@ package pkgaeropuerto.modelo;
 public class Charter extends Vuelo {
     private String nif;
 
-    public Charter(String destino, String modelo, int nPlazas, String nif) {
-        super(destino, modelo, nPlazas);
+    public Charter(String destino, String modelo, int nPlazas, String nif, int precio) {
+        super(destino, modelo, nPlazas, precio);
         this.nif = nif;
     }
 
@@ -14,6 +14,15 @@ public class Charter extends Vuelo {
 
     public void setNif(String nif) {
         this.nif = nif;
+    }
+
+    public double precioFinal(){
+        double precio = getPrecio() * 1.25;
+        if (getnPlazas() < 200){
+            precio += 50;
+        }
+
+        return precio;
     }
 
     @Override

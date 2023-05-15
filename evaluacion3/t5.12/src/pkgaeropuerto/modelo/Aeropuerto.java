@@ -11,14 +11,14 @@ public class Aeropuerto {
 	}
 
 	/**
-	 * Añade un vuelo a la aerolinea correspondiente solo en el caso de que el vuelo
-	 * no estuviese ya introducido, si la aerolinea no existiese se añade tanto la
+	 * AÃ±ade un vuelo a la aerolinea correspondiente solo en el caso de que el vuelo
+	 * no estuviese ya introducido, si la aerolinea no existiese se aÃ±ade tanto la
 	 * aerolinea como el vuelo.
 	 */
 	public void addVuelo(String aerolinea, Vuelo vuelo) {
 		Set<Vuelo> vueleosKey = vuelos.get(aerolinea);
 		if (vueleosKey == null){
-			vueleosKey = new TreeSet<>(vuelo);
+			vueleosKey = new TreeSet<>(Vuelo::compareTo);
 		}
 
 		vueleosKey.add(vuelo);
@@ -29,16 +29,8 @@ public class Aeropuerto {
 	 * Imprime los vuelos por cada aerolinea ordenados por destino, tanto aerolineas
 	 * como vuelos estaran ordenados alfabeticamente (Ver resultados de ejecucion)
 	 */
-	public void ordenAerolineasAlfabetico() {
-		Set<String> aerolineas = vuelos.keySet();
-		for (String aerolinea: aerolineas) {
-			System.out.println(aerolinea);
-			System.out.println("========\n");
-			Set<Vuelo> vuelosAerolinea = vuelos.get(aerolinea);
-			for (Vuelo vuelo: vuelosAerolinea) {
-				System.out.println(vuelo);
-			}
-		}
+	public void imprimirAeropuerto() {
+		System.out.println(toString());
 	}
 
 	/**
@@ -50,7 +42,7 @@ public class Aeropuerto {
 	 */
 	public void regularPorPlazas(String aerolinea) {
 		Set<Vuelo> vuelosAerolinea = vuelos.get(aerolinea);
-		Set<Regular> vuelosRegulares = new TreeSet<>();
+		Set<Regular> vuelosRegulares = new TreeSet<>(new ComparadorPorPlazas());
 		for (Vuelo vuelo: vuelosAerolinea) {
 			if (vuelo instanceof Regular){
 				vuelosRegulares.add((Regular) vuelo);
@@ -65,7 +57,7 @@ public class Aeropuerto {
 	/**
 	 * Devuelve una lista con vuelos regulares con plazas libres
 	 *
-	 * @return aerolina Aerolina del avion charter con más capacidad
+	 * @return aerolina Aerolina del avion charter con mÃ¡s capacidad
 	 */
 	public List<Vuelo> plazasLibres() {
 		Set<String> aerolineas = vuelos.keySet();
@@ -142,11 +134,56 @@ public class Aeropuerto {
 		}
 	}
 
+	public void imprimirPasajerosPorAerolinea(String aerolinea){
+		Set<Vuelo> vuelosAerolinea = vuelos.get(aerolinea);
+		int pasageros = 0;
+		for (Vuelo vuelo: vuelosAerolinea) {
+			if (vuelo instanceof Regular){
+				pasageros += vuelo.getnPlazas() - ((Regular) vuelo).getPlazasLibres();
+			} else {
+				pasageros += vuelo.getnPlazas();
+			}
+		}
+
+		System.out.println("La aerolina " + aerolinea + " ha desplazado a " + pasageros + " pasageros");
+	}
+
+	public void imprimirVuelosMasPasajerosQueMedia(){
+		Set<String> aerolineas = vuelos.keySet();
+		for (String aerolinea: aerolineas) {
+			Set<Vuelo> vuelosAerolinea = vuelos.get(aerolinea);
+			double media = 0;
+			for (Vuelo vuelo: vuelosAerolinea) {
+				media += vuelo.getnPlazas();
+			}
+
+			media = media / vuelosAerolinea.size();
+
+			System.out.println("La media de plazas de los vuelos de " + aerolinea + " es de " + media);
+			System.out.println("Los Vuelos de " + aerolinea + " con mas plaxas que la media son:");
+			for (Vuelo vuelo: vuelosAerolinea) {
+				if (vuelo.getnPlazas() >= media){
+					System.out.println(vuelo);
+				}
+			}
+		}
+	}
+
 	/**
-	 * Represetación textual del mapa tal y como se muestra en el enunciado
+	 * RepresetaciÃ³n textual del mapa tal y como se muestra en el enunciado
 	 */
 	public String toString() {
-		return null;
+		StringBuilder sb = new StringBuilder();
+		Set<String> aerolineas = vuelos.keySet();
+		for (String aerolinea: aerolineas) {
+			sb.append(aerolinea);
+			sb.append("\n========\n");
+			Set<Vuelo> vuelosAerolinea = vuelos.get(aerolinea);
+			for (Vuelo vuelo: vuelosAerolinea) {
+				sb.append(vuelo).append("\n");
+			}
+		}
+		return sb.toString();
 	}
 
 	/**
@@ -164,12 +201,13 @@ public class Aeropuerto {
 				String destino = vuelo[1];
 				String avion = vuelo[2];
 				int plazas = Integer.parseInt(vuelo[3].trim());
+				int precio = Integer.parseInt((vuelo[5].trim()));
 				if (vuelo[0].equals("R")) {
 					int plazasLibres = Integer.parseInt(vuelo[4].trim());
-					this.addVuelo(aerolinea, new Regular(destino, avion, plazas, plazasLibres));
+					this.addVuelo(aerolinea, new Regular(destino, avion, plazas, plazasLibres,precio));
 				} else {
 					String nifEmpresa = vuelo[4];
-					this.addVuelo(aerolinea, new Charter(destino, avion, plazas, nifEmpresa));
+					this.addVuelo(aerolinea, new Charter(destino, avion, plazas, nifEmpresa,precio));
 				}
 			}
 

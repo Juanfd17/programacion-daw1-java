@@ -3,15 +3,17 @@ package pkgaeropuerto.modelo;
 import java.util.Comparator;
 import java.util.Objects;
 
-public abstract class Vuelo implements Comparator<Vuelo>{
+public abstract class Vuelo implements Comparable<Vuelo>{
     private String destino;
     private String modelo;
     private int nPlazas;
+    private int precio;
 
-    public Vuelo(String destino, String modelo, int nPlazas) {
+    public Vuelo(String destino, String modelo, int nPlazas, int precio) {
         this.destino = destino;
         this.modelo = modelo;
         this.nPlazas = nPlazas;
+        this.precio = precio;
     }
 
     public String getDestino() {
@@ -46,22 +48,26 @@ public abstract class Vuelo implements Comparator<Vuelo>{
         return result;
     }
 
-
-
     @Override
-    public int compare(Vuelo o1, Vuelo o2) {
-        int posicion = o1.destino.compareTo(o2.getDestino());
+    public int compareTo(Vuelo o) {
+        int posicion = this.destino.compareTo(o.getDestino());
 
         if (posicion == 0){
-            posicion = o1.modelo.compareTo(o2.getModelo());
+            posicion = this.modelo.compareTo(o.getModelo());
         }
 
         if (posicion == 0){
-            posicion = Integer.compare(o1.nPlazas, o2.getnPlazas());
+            posicion = Integer.compare(this.nPlazas, o.getnPlazas());
         }
 
         return posicion;
     }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    public abstract double precioFinal();
 
     @Override
     public String toString() {
@@ -69,8 +75,7 @@ public abstract class Vuelo implements Comparator<Vuelo>{
         sb.append("Destino: ").append(destino).append("\n");
         sb.append("Avion: ").append(modelo).append("\n");
         sb.append("Plazas: ").append(nPlazas).append("\n");
+        sb.append("Precio billete: ").append(precioFinal()).append(" €").append("\n");
         return sb.toString();
     }
-
-
 }
